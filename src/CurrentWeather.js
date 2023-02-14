@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./CurrentWeather.css";
 import ReactAnimatedWeather from "react-animated-weather";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function CurrentWeather() {
   const [ready, setReady] = useState(false);
@@ -12,6 +13,7 @@ export default function CurrentWeather() {
     setReady(true);
     setWeather({
       city: response.data.city,
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
@@ -40,7 +42,9 @@ export default function CurrentWeather() {
                 ></input>
               </form>
               <h2>{weather.city}</h2>
-              <p className="CurrentDay">Sunday 20:00</p>
+              <p className="CurrentDay">
+                <FormattedDate date={weather.date} />
+              </p>
               <p className="CurrentDescription">{weather.description}</p>
               <div className="row">
                 <div className="col-2 WeatherImage">
