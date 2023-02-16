@@ -1,0 +1,15 @@
+.mainIcon {
+  width: 90px;
+}
+
+.CurrentDay,
+.CurrentDescription {
+  font-size: 18px;
+  margin: 0px;
+}
+.CurrentDescription {
+  color: rgba(0, 68, 68, 0.7);
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}

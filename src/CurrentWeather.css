@@ -29,16 +29,6 @@ h2 {
   font-weight: 600;
   color: rgb(0, 68, 68);
 }
-.CurrentDay,
-.CurrentDescription {
-  font-size: 18px;
-  margin: 0px;
-}
-.CurrentDescription {
-  color: rgba(0, 68, 68, 0.7);
-  font-weight: 500;
-  margin-bottom: 15px;
-}
 .WeatherImage {
   padding: 0 20px 0 0;
 }
@@ -48,9 +38,7 @@ h2 {
   padding-left: 20px;
   color: rgb(0, 68, 68);
 }
-.Unit {
-  font-size: 20px;
-}
+
 .WeatherConditions {
   margin: 0;
   font-size: 15px;
