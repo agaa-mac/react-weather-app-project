@@ -8,7 +8,7 @@ import WeatherInfo from "./WeatherInfo";
 export default function CurrentWeather() {
   const [ready, setReady] = useState(false);
   const [weather, setWeather] = useState({});
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("London");
 
   function handleResponse(response) {
     console.log(response.data);
@@ -20,8 +20,7 @@ export default function CurrentWeather() {
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       wind: Math.round(response.data.wind.speed),
-      iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png",
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
     });
   }
   function search() {
