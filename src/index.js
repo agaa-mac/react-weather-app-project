@@ -9,9 +9,30 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <CurrentWeather />
-  </React.StrictMode>
+  <div>
+    <React.StrictMode>
+      <CurrentWeather />
+    </React.StrictMode>
+    <footer>
+      This project was coded by Agata Mączyńska and is open-sourced on{" "}
+      <a
+        href="https://github.com/agaa-mac/react-weather-app-project"
+        rel="noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>{" "}
+      and hosted on
+      <a
+        href="https://musical-rabanadas-60e773.netlify.app/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        {" "}
+        Netlify
+      </a>{" "}
+    </footer>
+  </div>
 );
 
 reportWebVitals();

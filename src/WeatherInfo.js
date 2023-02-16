@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
             alt={props.data.description}
           />
         </div>
-        <div className="col-5 WeatherTemp">
+        <div className="col-6 WeatherTemp">
           <WeatherTemperature tempC={props.data.temperature} />
         </div>
       </div>
