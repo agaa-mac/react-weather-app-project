@@ -9,7 +9,6 @@ export default function FormattedData(props) {
     "Thursday",
     "Friday",
     "Saturday",
-    ,
   ];
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();

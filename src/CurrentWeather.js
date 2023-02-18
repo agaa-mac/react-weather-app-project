@@ -20,7 +20,7 @@ export default function CurrentWeather() {
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       wind: Math.round(response.data.wind.speed),
-      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      icon: response.data.condition.icon,
     });
   }
   function search() {
@@ -56,7 +56,7 @@ export default function CurrentWeather() {
                   className="SearchButton"
                 ></input>
               </form>
-              <WeatherInfo data={weather} />
+              <WeatherInfo data={weather} alt={weather.description} />
             </div>
           </div>
           <ForecastWeather />
