@@ -59,7 +59,7 @@ export default function CurrentWeather() {
               <WeatherInfo data={weather} alt={weather.description} />
             </div>
           </div>
-          <ForecastWeather />
+          <ForecastWeather city={weather.city} />
         </div>
       </div>
     );

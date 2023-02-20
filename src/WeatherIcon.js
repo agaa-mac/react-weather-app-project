@@ -10,7 +10,7 @@ export default function WeatherIcon(props) {
     "few-clouds-night": "PARTLY_CLOUDY_NIGHT",
     "scattered-clouds-day": "CLOUDY",
     "scattered-clouds-night": "CLOUDY",
-    "broken-clouds-day": "",
+    "broken-clouds-day": "PARTLY_CLOUDY_NIGHT",
     "broken-clouds-night": "PARTLY_CLOUDY_NIGHT",
     "shower-rain-day": "PARTLY_CLOUDY_NIGHT",
     "shower-rain-night": "PARTLY_CLOUDY_NIGHT",
@@ -28,7 +28,7 @@ export default function WeatherIcon(props) {
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
       color=" rgb(0, 68, 68)"
-      size={60}
+      size={props.size}
       animate={true}
     />
   );
