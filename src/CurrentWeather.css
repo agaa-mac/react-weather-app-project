@@ -45,14 +45,12 @@ h2 {
   color: rgba(0, 68, 68, 0.7);
   font-weight: 500;
 }
-.Forecast {
-  padding: 10px 20px;
-  color: rgb(0, 68, 68);
-  font-weight: 600;
-}
+
 .ForecastInfo {
   padding: 20px 0;
+  display: inline;
 }
+
 .Temperature {
   padding-left: 0;
   color: rgba(0, 68, 68, 0.7);
@@ -61,4 +59,10 @@ h2 {
 }
 .ForecastDay {
   margin-top: 10px;
+}
+
+.Forecast {
+  padding: 10px 20px;
+  color: rgb(0, 68, 68);
+  font-weight: 600;
 }
