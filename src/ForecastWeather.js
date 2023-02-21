@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 
 import WeatherForecastDay from "./WeatherForecastDay";
@@ -12,6 +12,11 @@ export default function ForecastWeather(props) {
     setLoaded(true);
     setForecast(response.data.daily);
   }
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.city]);
+
   if (loaded) {
     return (
       <div className="col-5">
@@ -24,6 +29,8 @@ export default function ForecastWeather(props) {
                     <WeatherForecastDay data={dailyForecast} />
                   </div>
                 );
+              } else {
+                return null;
               }
             })}
           </div>
